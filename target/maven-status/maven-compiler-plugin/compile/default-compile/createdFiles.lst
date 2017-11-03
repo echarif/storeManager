@@ -1,0 +1,17 @@
+org\store\manager\controller\SalesController.class
+org\store\manager\model\ErrorMessage.class
+storeManager\Greeting.class
+org\store\manager\service\CustomerService.class
+storeManager\GreetingController.class
+org\store\manager\model\Customer.class
+org\store\manager\model\Product.class
+org\store\manager\controller\CustomerController.class
+org\store\manager\controller\SessionController.class
+org\store\manager\controller\ProductController.class
+org\store\manager\database\CustomerDAO.class
+org\store\manager\database\ProductDAO.class
+org\store\manager\controller\ClientController.class
+org\store\manager\controller\EmployeeController.class
+storeManager\Application.class
+org\store\manager\database\DBConnection.class
+org\store\manager\service\ProductService.class
