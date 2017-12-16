@@ -1,21 +1,11 @@
-#!groovy
-import static Constants.*
-
-class Constants {
-
-    static final DEV_BRANCH_NAME = "develop"
-    static final MASTER_BRANCH_NAME = "master"
-}
-
-def downloadCodeAndBuild() {
-    stage('Download code') {
-        git branch: env.BRANCH_NAME, credentialsId: 'echarif', url: 'https://github.com/echarif/storeManager.git'
+pipeline {
+  agent { docker 'ruby:2.1' }
+  stages {
+    stage('build') {
+      steps {
+        sh 'ruby --version'
+        sh 'bundle install'
+      }
     }
-
-    stage('Build and test code') {
-        try {
-            sh "mvn clean install"
-        } catch (e) {
-        }
-    }
+  }
 }
