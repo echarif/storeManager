@@ -9,7 +9,6 @@ class Constants {
 
 def downloadCodeAndBuild() {
     stage('Download code') {
-        deleteDir()
         git branch: env.BRANCH_NAME, credentialsId: 'echarif', url: 'https://github.com/echarif/storeManager.git'
     }
 
