@@ -1,12 +1,9 @@
-pipeline {
-    agent {
-        docker { image 'node:7-alpine' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
-        }
-    }
+stage('Download code'){
+    echo "Downloading the code";
+}
+
+stage('Testing') {
+  git url: 'https://github.com/echarif/storeManager.git'
+  def mvnHome = tool 'M3'
+  sh "${mvnHome}/bin/mvn -B verify"
 }
